@@ -5,6 +5,8 @@ const cors = require('cors')
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cors())
+//con esto aseguros q siempre q express reciba una peticion de tipo static, le diga q busque en la carpeta dist el archivo solicitado
+app.use(express.static('dist'))    
 
 let agenda=[
     { 
